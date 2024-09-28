@@ -30,5 +30,6 @@ public class Savings extends Account{
     }
 
     public void addInterestToBalance() {
+        set += intAmount;
     }
 }
