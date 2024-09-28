@@ -1,18 +1,27 @@
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList <Double> dsDiem = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<Student>();
         Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 3; i++ ){
+            System.out.println("Enter student id : ");
+            String id = scanner.nextLine();
+            System.out.println("Enter student name: ");
+            String name = scanner.nextLine();
+            System.out.println("Enter student email: ");
+            String email = scanner.nextLine();
+            System.out.println("Enter student address: ");
+            String address = scanner.nextLine();
 
-        for (int i = 0; i<4; i++){
-            System.out.println("Nhap diem sinh vien thu " + (i+1)+ ": ");
-            dsDiem.add(scanner.nextDouble());
+            Student student = new Student(id, name, email, address);
+            students.add(student);
         }
 
-        for (int i = 0; i < dsDiem.size(); i++){
-            System.out.println("Diem sinh vien thu " + (i+1) + ": "+ dsDiem.get(i));
+        for (Student student : students){
+            student.display();
         }
     }
 }

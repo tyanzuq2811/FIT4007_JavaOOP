@@ -42,4 +42,9 @@ public class Student {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void display() {
+        System.out.println("MSV: " + id + ", nam: " + name + ", email: "+ email + ", address: " + address);
+    }
+
 }
